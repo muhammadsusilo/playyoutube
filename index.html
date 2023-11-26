@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comunity</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(172, 172, 172);
+      }
+      video {
+        margin: 2rem ;
+        width: 500px;
+      }
+      .awal {
+        margin: 0 2rem;
+        text-transform: uppercase;
+      }
+
+      button {
+        border: none;
+        padding: 12px 20px;
+        color: white;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay  >
+      <source src="Arcade.mp4" type="video/mp4" />
+    </video>
+    <div class="awal">
+        <h3>Play video</h3></p>
+        <button>Click Video</button>
+    </div>
+    <script>
+        const videoKu = document.getElementsByTagName("video")[0];
+        const buttonKlik = document.getElementsByTagName("button")[0];
+
+        buttonKlik.addEventListener("click", function(){
+            if(videoKu.paused){
+                videoKu.play()
+                buttonKlik.innerHTML= "PLAY";
+            } else {
+                videoKu.pause()
+                buttonKlik.innerHTML = "PAUSED";
+            }
+        })
+    </script>
+  </body>
+</html>
+
